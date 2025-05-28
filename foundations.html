@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MBS Vasudha Foundations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fa; color: #222; }
+        header { background: #2e7d32; color: #fff; padding: 30px 0; text-align: center; }
+        nav { background: #388e3c; padding: 10px 0; text-align: center; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .container { max-width: 900px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+        h1, h2 { margin-top: 0; }
+        .about, .projects, .contact { margin-bottom: 40px; }
+        footer { background: #2e7d32; color: #fff; text-align: center; padding: 15px 0; margin-top: 40px; }
+        @media (max-width: 600px) {
+            .container { padding: 15px; }
+            nav a { display: block; margin: 10px 0; }
+        }
+        form { display: flex; flex-direction: column; }
+        form label { margin-bottom: 5px; }
+        form input, form textarea { padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; }
+        form button { background: #2e7d32; color: #fff; border: none; padding: 10px; border-radius: 4px; cursor: pointer; } 
+        form button:hover { background: #1b5e20; }
+        a { color: #2e7d32; }
+        a:hover { text-decoration: underline; }
+        .highlight { color: #d32f2f; font-weight: bold; }
+        .projects ul { list-style-type: none; padding: 0; }
+        .projects li { margin-bottom: 10px; }
+        .projects li strong { color: #388e3c; }
+        .contact p { margin: 0; }
+        .contact a { color: #388e3c; }
+        .contact a:hover { text-decoration: underline; }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8em; }
+            nav a { font-size: 1em; }
+            .container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MBS Vasudha Foundations</h1>
+        <p>Building a Greener, Sustainable Future</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        
+    </nav>
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>
+                MBS Vasudha Foundations is dedicated to environmental sustainability and community development.
+                Our mission is to promote eco-friendly practices, support green initiatives, and empower communities
+                to create a positive impact on the environment.
+            </p>
+        </section>
+        <section id="projects" class="projects">
+            <h2>Our Projects</h2>
+            <ul>
+                <li><strong>Tree Plantation Drives:</strong> Organizing large-scale tree plantation events in urban and rural areas.</li>
+                <li><strong>Clean Water Initiatives:</strong> Providing access to clean and safe drinking water in underserved communities.</li>
+                <li><strong>Environmental Awareness:</strong> Conducting workshops and campaigns to educate people about sustainability.</li>
+            </ul>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>
+                Email: <a href="mailto:info@mbsvasudha.org">info@mbsvasudha.org</a><br>
+                Phone: +91-9900014299<br>
+                Address: MBS Vasudha Foundations, Hanchipura village, Nelamangala, Bengaluru, Karnataka India
+            </p>
+            <form>
+                <input type="text" placeholder="NAME" id="name" name="name" required>
+                <input type="email" placeholder="example1@gmail.com" id="email" name="email" required><br>
+                <input type="text" placeholder="PHONE NUMBER" id="phone" name="phone" required><br>
+                <label for="message" style="color: black; ">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 MBS Vasudha Foundations. All rights reserved.
+    </footer>
+</body>
+</html>

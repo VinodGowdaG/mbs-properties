@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MBS PROPERTIES</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore premium real estate plots and homes with MBS Vasudha in Nelamangala, Bengaluru. Trusted by hundreds for residential and commercial properties.">
+  <meta name="keywords" content="MBS Properties, MBS Vasudha, real estate Bengaluru, Nelamangala, Mylanahalli plots, property for sale">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mbs-properties.netlify.app"> <!-- Or your real domain -->
+
+  <!-- Open Graph Tags for Social Sharing -->
+  <meta property="og:title" content="MBS Properties | Real Estate in Bengaluru - MBS Vasudha">
+  <meta property="og:description" content="Find your ideal plot or property at MBS Vasudha in Nelamangala. Trusted real estate service in Bengaluru.">
+  <meta property="og:image" content="https://yourdomain.com/images/logo.jpeg"> <!-- Replace with actual image URL -->
+  <meta property="og:url" content="https://mbs-properties.netlify.app"> <!-- Or your real domain -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon and Fonts -->
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+  <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+ 
+<body>
+    <header>
+        <img class="logo" src="/images/logo.jpeg" alt="MBS Properties Logo">
+        <h1>MBS PROPERTIES</h1>
+        <p>Your Trusted Real Estate Partners in Bengaluru</p>
+    </header>
+    <nav>
+        <a href="properties.html" class="nav-link">Properties</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#social-media" class="nav-link">Follow us</a>
+    </nav>
+    <style>
+        nav {
+            position: relative;
+            z-index: 20;
+        }
+        .nav-link {
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s;
+            overflow: hidden;
+            font-family: 'Roboto', 'Trirong', Arial, sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #52b788, #2d6a4f);
+            transition: width 0.3s cubic-bezier(.4,0,.2,1), left 0.3s cubic-bezier(.4,0,.2,1);
+        }
+        .nav-link:hover,
+        .nav-link:focus {
+            color: #b7e4c7;
+            animation: nav-bounce 0.4s;
+        }
+        .nav-link:hover::after,
+        .nav-link:focus::after {
+            width: 100%;
+            left: 0;
+        }
+        @keyframes nav-bounce {
+            0%   { transform: translateY(0);}
+            30%  { transform: translateY(-6px);}
+            50%  { transform: translateY(2px);}
+            70%  { transform: translateY(-2px);}
+            100% { transform: translateY(0);}
+        }
+        /* Font styles for headings and body */
+        body, html {
+            font-family: 'Roboto', 'Trirong', Arial, sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Trirong', 'Roboto', Arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        p, a, li, span, label, input, textarea, button {
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+    </style>
+    <section class="hero">
+        <h2>Find Your Dream Plot At MBS Properties</h2>
+        <p>Explore premium residential and commercial plots at the best locations.</p>
+    </section>
+
+    <section class="text-marquee-container">
+        <div class="text-marquee" id="textMarquee">
+            <span>
+                Welcome to MBS Vasudha – Your Trusted Real Estate Partner in Bengaluru! &nbsp; • &nbsp;
+                Premium Residential & Commercial Plots Available at Mylanahalli Village, Nelamangala. &nbsp; • &nbsp;
+                Contact us today for the best deals and personalized service! &nbsp; • &nbsp;
+                Explore our properties and find your dream home! &nbsp; • &nbsp;
+                MBS Vasudha – Building Dreams, One Plot at a Time!
+            </span>
+        </div>
+    </section>
+
+    <style>
+    .text-marquee-container {
+        width: 100vw;
+        overflow: hidden;
+        background: #e9ecef;
+        padding: 0.5rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-marquee {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+    }
+    .text-marquee span {
+        display: inline-block;
+        font-size: 1.3rem;
+        color: #2d6a4f;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        padding-left: 100vw;
+        animation: marquee-left 25s linear infinite;
+    }
+    @keyframes marquee-left {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    @media (max-width: 700px) {
+        .text-marquee span {
+            font-size: 1rem;
+        }
+    }
+    </style>
+
+    <section class="slideshow-container">
+        <div class="slideshow-slide fade">
+            <img src="/images/slide1.jpg" alt="MBS Vasudha Slide 1">
+            <div class="slideshow-caption">Welcome to MBS Vasudha – Your Trusted Real Estate Partner in Bengaluru!</div>
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="/images/slide2.JPG" alt="MBS Vasudha Slide 2">
+            <div class="slideshow-caption">Premium Residential & Commercial Plots at Mylanahalli, Nelamangala</div>
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="/images/slide3.JPG" alt="MBS Vasudha Slide 3">
+            <div class="slideshow-caption">Contact us today for the best deals and personalized service!</div>
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="/images/slide4.JPG" alt="MBS Vasudha Slide 4">
+            <div class="slideshow-caption">Explore our properties and find your dream home!</div>
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="/images/slide5.JPG" alt="MBS Vasudha Slide 5">
+            <div class="slideshow-caption">MBS Vasudha – Building Dreams, One Plot at a Time!</div>
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="/images/slide6.JPG" alt="MBS Vasudha Slide 6">
+            <div class="slideshow-caption">Your satisfaction is our priority!</div>
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="/images/slide7.JPG" alt="MBS Vasudha Slide 7">
+            <div class="slideshow-caption">Join our community and experience the MBS difference!</div>
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="/images/slide8.JPG" alt="MBS Vasudha Slide 8">
+            <div class="slideshow-caption">MBS Vasudha – Your Gateway to a Better Future!</div>
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="/images/slide9.JPG" alt="MBS Vasudha Slide 9">
+            <div class="slideshow-caption">Discover the beauty of MBS Vasudha!</div>
+        </div>
+        <div class="slideshow-slide fade">
+            <img src="/images/slide10.JPG" alt="MBS Vasudha Slide 10">
+            <div class="slideshow-caption">Experience luxury living with MBS Vasudha!</div>
+        </div>
+        <!-- Add more slides as needed -->
+        <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+    <style>
+    .slideshow-container {
+        position: relative;
+        margin: 0 0 2rem 0;
+        width: 100vw;
+        left: 50%;
+        right: 0;
+        transform: translateX(-50%);
+        min-height: 550px;
+        background: #dad5d5cf;
+        border-radius: 0;
+        box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100vw;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 16px;
+        
+
+       
+    }
+    .slideshow-slide {
+        display: none;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        position: relative;
+    }
+    .slideshow-slide img {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 530px;
+        object-fit: cover;
+        border-radius: 0;
+        margin: 0 auto;
+        display: block;
+        background: #e9ecef;
+    }
+    .slideshow-caption {
+        position: absolute;
+        left: 50%;
+       
+        top: 30px;
+        transform: translateX(-50%);
+        background: rgba(107, 167, 223, 0.529);
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        max-width: 80%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        text-align: center;
+    }
+    .slideshow-prev, .slideshow-next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+        color: #2d6a4f;
+        font-weight: bold;
+        font-size: 2rem;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.7);
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        transition: background 0.4s;
+    }
+    .slideshow-prev:hover, .slideshow-next:hover {
+        background: #b7e4c7;
+    }
+    .slideshow-prev {
+        left: 16px;
+    }
+    .slideshow-next {
+        right: 16px;
+    }
+    @media (max-width: 700px) {
+        .slideshow-container {
+            min-height: 200px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-bottom: 8px;
+        }
+        .slideshow-slide img {
+            max-height: 180px;
+        }
+        .slideshow-caption {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            bottom: 16px;
+        }
+        .slideshow-prev, .slideshow-next {
+            width: 32px;
+            height: 32px;
+            font-size: 1.5rem;
+        }
+    }
+    </style>
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("slideshow-slide");
+        if (slides.length === 0) return;
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+    // Optional: auto slideshow
+    setInterval(() => { plusSlides(1); }, 8000);
+    </script>
+    <!--Property cards -->
+    <section id="properties" class="properties">
+        <div class="property-card">
+            <img src="/images/mp1.JPG" alt="MBS VASUDHA">
+            <div class="property-info">
+                <h3>MBS PROPERTIES</h3>
+                <p>MBS | VASUDHA | Concrete Roads</p>
+                <p><strong>Location:</strong>📍Mylanahalli, Nelamangala</p>
+                <p><strong>Price:</strong> ₹----</p>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="/images/mp2.JPG" alt="MBS VASUDHA">
+            <div class="property-info">
+                <h3>MBS PROPERTIES</h3>
+                <p>MBS | VASUDHA | Play Garden</p>
+                <p><strong>Location:</strong>📍Mylanahalli, Nelamangala</p>
+                <p><strong>Price:</strong> ₹----</p>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="/images/mp3.JPG" alt="MBS VASUDHA">
+            <div class="property-info">
+                <h3>MBS PROPERTIES</h3>
+                <p>MBS | VASUDHA | Security OFFICE</p>
+                <p><strong>Location:</strong>📍Mylanahalli, Nelamangala</p>
+                <p><strong>Price:</strong> ₹----</p>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="/images/mp4.JPG" alt="MBS VASUDHA">
+            <div class="property-info">
+                <h3>MBS PROPERTIES</h3>
+                <p>MBS | VASUDHA | On Construction</p>
+                <p><strong>Location:</strong>📍Mylanahalli, Nelamangala</p>
+                <p><strong>Price:</strong> ₹----</p>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="/images/mp5.JPG" alt="MBS VASUDHA">
+            <div class="property-info">
+                <h3>MBS PROPERTIES</h3>
+                <p>MBS | VASUDHA | A Awful View</p>
+                <p><strong>Location:</strong>📍Mylanahalli, Nelamangala</p>
+                <p><strong>Price:</strong> ₹----</p>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="/images/mp6.JPG" alt="MBS VASUDHA">
+            <div class="property-info">
+                <h3>MBS PROPERTIES</h3>
+                <p>MBS | VASUDHA | Site View</p>
+                <p><strong>Location:</strong>📍Mylanahalli, Nelamangala</p>
+                <p><strong>Price:</strong> ₹----</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 style="text-align:center">Why Choose MBS Properties?</h2>
+        <ul class="features-list">
+            <li>✅ Premium Locations</li>
+            <li>✅ Transparent Transactions</li>
+            <li>✅ Personalized Service</li>
+            <li>✅ Competitive Pricing</li>
+            <li>✅ Trusted by Hundreds of Clients</li>
+            <li>✅ Expert Guidance</li>
+            <li>✅ Comprehensive Support</li>
+        </ul>
+        <style>
+            .features-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.5rem;
+                margin: 0 auto;
+                padding: 0;
+                list-style-type: none;
+            }
+            .features-list li {
+                background: #b7e4c7;
+                color: #2d6a4f;
+                padding: 0.75rem 1.5rem;
+                border-radius: 8px;
+                font-size: 1.1rem;
+                font-weight: bold;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+            @media (max-width: 600px) {
+                .features-list li {
+                    flex-basis: calc(50% - 1rem);
+                    text-align: center;
+                    font-size: 1rem;
+                }
+            }
+            @media (max-width: 400px) {
+                .features-list li {
+                    flex-basis: calc(100% - 1rem);
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
+    </section>
+
+    <section id="about" class="contact">
+        <h2>About MBS Properties</h2>
+        <p>
+            MBS Properties is a leading real estate company offering a wide range of residential and commercial properties. 
+            With years of experience and a commitment to excellence, we help you find the perfect property that matches your needs and budget.
+        </p>
+        <p>
+            Our team of experts is dedicated to providing personalized service and expert advice to ensure a smooth and successful property transaction.
+            Whether you are buying, selling, or renting, we are here to assist you every step of the way.
+        </p>
+        <p>
+            Contact us today to learn more about our services and how we can help you achieve your real estate goals.
+        </p>
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:mbsvasudha@gmail.com">mbsvasudha@gmail.com</a>
+            <strong>Phone:</strong>
+            <a href="tel:+919900014299">+91 9900014299/ 9900014588</a>
+        </p>
+        <p>
+            <strong>Address:</strong>
+            MBS Vasudha, Mylanahalli Village, Kasaba Hobli, Nelamangala, Bengaluru Rural District, Karnataka -562123</p>
+                    </section>
+
+<section>
+    <h2 style="position:relative; text-align:center">Click Below to View Our Projects</h2>
+    <H3>
+        <span style="display: inline-block; text-align: center; width: 100%; font-weight: bold; font-size: 2rem;
+         background: linear-gradient(90deg, #2d6a4f, #52b788, #b7e4c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+          <a href="properties.html">OUR PROJECTS</a>  
+        </span>
+    </H3>
+</section>
+    
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/mkgradbb" method="POST">
+            <input type="hidden" name="_subject" value="New message from MBS Vasudha">
+            <input type="text" name="_subject" placeholder="Your Name" required>
+            <input type="email" name="_subject" placeholder="Your Email" required>
+            <input type="tel" name="_subject" placeholder="Your Phone Number" pattern="[0-9]*" inputmode="numeric" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <script>
+        // Simple email sending using Formspree (no backend required)
+        document.querySelector('#contact form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const phone = this.querySelector('input[type="tel"]').value;
+            const message = this.querySelector('textarea').value;
+
+            // Replace with your Formspree endpoint or similar service
+            fetch('https://formspree.io/f/mkgradbb', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(this)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Thank you! Your message has been sent.');
+                    this.reset();
+                } else {
+                    alert('Sorry, there was an error sending your message.');
+                }
+            })
+            .catch(() => alert('Sorry, there was an error sending your message.'));
+        });
+        </script>
+        </form>
+    </section>
+<!-- Contact Form -->
+    <section >
+         <h1 style="text-align: center;color:#1f3bda;border: radius 10px;font-weight:bold;text-overflow:initial;text-decoration:solid">Follow Us On</h1>
+    </section>
+    <section id="social-media" class="social-media">
+        <h2 style="text-align:center"></h2>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/vinodg.gowda.7?mibextid=ZbWKwL" target="_blank" aria-label="Facebook">
+                <img src="https://img.icons8.com/ios-filled/24/4267B2/facebook-new.png" alt="Facebook" class="social-icon" />
+                <span class="social-label">Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/vinod_g_gowda/" target="_blank" aria-label="Instagram">
+                <img src="https://img.icons8.com/ios-filled/24/E4405F/instagram-new.png" alt="Instagram" class="social-icon" />
+                <span class="social-label">Instagram</span>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                <img src="https://img.icons8.com/ios-filled/24/1DA1F2/twitter.png" alt="Twitter" class="social-icon" />
+                <span class="social-label">Twitter</span>
+            </a>
+            <a href="https://www.linkedin.com/in/vinodgowda-g-666a27274?" target="_blank" aria-label="LinkedIn">
+                <img src="https://img.icons8.com/ios-filled/24/0077B5/linkedin.png" alt="LinkedIn" class="social-icon" />
+                <span class="social-label">LinkedIn</span>
+            </a>
+            <a href="https://www.google.com/maps/place/13%C2%B008'24.9%22N+77%C2%B022'29.8%22E/@13.1402533,77.3723634,17z/data=!3m1!4b1!4m4!3m3!8m2!3d13.1402533!4d77.3749383?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" aria-label="Maps">
+                <img src="https://img.icons8.com/ios-filled/24/EA4335/marker.png" alt="Maps" class="social-icon" />
+                <span class="social-label">Maps</span>
+            </a>
+        </div>
+        <style>
+            .social-media-links {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 1rem;
+                flex-wrap: wrap;
+            }
+            .social-media-links a {
+                text-decoration: none;
+                color: #7e0e0e;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                gap: 0.4em;
+                background: #f8f9fa;
+                padding: 0.5em 1em;
+                border-radius: 8px;
+                transition: background 0.2s, color 0.2s;
+                font-size: 1rem;
+            }
+            .social-media-links a:hover {
+                background: #e9ecef;
+                color: #2d6a4f;
+                text-decoration: underline;
+            }
+            .social-icon {
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .social-label {
+                display: inline-block;
+            }
+            @media (max-width: 600px) {
+                .social-media-links {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.7rem;
+                }
+                .social-media-links a {
+                    width: 90vw;
+                    max-width: 320px;
+                    justify-content: flex-start;
+                    font-size: 1.05rem;
+                }
+                .social-label {
+                    font-size: 1rem;
+                }
+            }
+            @media (max-width: 400px) {
+                .social-media-links a {
+                    font-size: 0.95rem;
+                    padding: 0.4em 0.7em;
+                }
+                .social-icon {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- Simple Chatbot Widget -->
+    <div id="chatbot-container" style="position:fixed;bottom:24px;right:24px;z-index:9999;">
+        <button id="chatbot-toggle" style="background:#2d6a4f;color:#fff;border:none;border-radius:50%;width:56px;height:56px;box-shadow:0 2px 8px rgba(0,0,0,0.18);font-size:2rem;cursor:pointer;">
+            💬
+        </button>
+        <div id="chatbot-window" style="display:none;width:320px;max-width:90vw;height:400px;background:#fff;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.18);padding:0;overflow:hidden;flex-direction:column;">
+            <div style="background:#2d6a4f;color:#fff;padding:1rem;font-weight:bold;display:flex;justify-content:space-between;align-items:center;">
+                Chat with us
+                <span id="chatbot-close" style="cursor:pointer;font-size:1.2rem;">&times;</span>
+            </div>
+            <div id="chatbot-messages" style="flex:1;overflow-y:auto;padding:1rem;background:#f6f6f6;font-size:1rem;"></div>
+            <form id="chatbot-form" style="display:flex;border-top:1px solid #e0e0e0;">
+                <input id="chatbot-input" type="text" placeholder="Type your message..." autocomplete="off" style="flex:1;padding:0.75rem;border:none;font-size:1rem;">
+                <button type="submit" style="background:#2d6a4f;color:#fff;border:none;padding:0 1rem;font-size:1.2rem;cursor:pointer;">➤</button>
+            </form>
+        </div>
+    </div>
+    <script>
+    (function() {
+        const toggle = document.getElementById('chatbot-toggle');
+        const windowEl = document.getElementById('chatbot-window');
+        const close = document.getElementById('chatbot-close');
+        const form = document.getElementById('chatbot-form');
+        const input = document.getElementById('chatbot-input');
+        const messages = document.getElementById('chatbot-messages');
+
+        function appendMessage(text, from) {
+            const msg = document.createElement('div');
+            msg.style.margin = '0.5rem 0';
+            msg.style.textAlign = from === 'user' ? 'right' : 'left';
+            msg.innerHTML = `<span style="display:inline-block;max-width:80%;padding:0.5rem 1rem;border-radius:16px;background:${from==='user'?'#b7e4c7':'#fff'};color:#222;">${text}</span>`;
+            messages.appendChild(msg);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        function botReply(userText) {
+            let reply = "Thank you for reaching out! We'll get back to you soon.";
+            if (userText.toLowerCase().includes('hello')) reply = "Hello! How can I assist you today?";
+            else if (userText.toLowerCase().includes('help')) reply = "Sure! What do you need help with?";
+            else if (userText.toLowerCase().includes('thank you')) reply = "You're welcome! If you have any more questions, feel free to ask.";
+            else if (userText.toLowerCase().includes('bye')) reply = "Goodbye! Have a great day!";
+            else if (userText.toLowerCase().includes('hi')) reply = "Hi there! How can I assist you today?";
+            else if (userText.toLowerCase().includes('hello')) reply = "Hello! How can I assist you today?";
+            else if (userText.toLowerCase().includes('thanks')) reply = "You're welcome! If you have any more questions, feel free to ask.";
+            else if (userText.toLowerCase().includes('goodbye')) reply = "Goodbye! Have a great day!";
+            else if (userText.toLowerCase().includes('Property details')) reply = "Sure! Text us on whatsapp we will share details.";
+            else if (userText.toLowerCase().includes('site visit')) reply = "Sure! Text us on whatsapp we will schedule a site visit.";
+            const txt = userText.toLowerCase();
+            if (txt.includes('details')) reply = "We offer a variety of residential and commercial plots. Please specify what you're looking for.";
+            else if (txt.includes('site visit')) reply = "Sure! We can arrange a site visit. Please provide your contact details.";
+            else if (txt.includes('whatsapp')) reply = "You can reach us on WhatsApp at +91 6363336313.";
+            else if (txt.includes('email')) reply = "You can email us at mbsvasudha@gmail.com.";
+            else if (txt.includes('call')) reply = "You can call us at +91 6363336313.";
+            if (txt.includes('price')) reply = "For pricing details, please call us at +91 6363336313 or email mbsvasudha@info.in.";
+            else if (txt.includes('location')) reply = "We are located at Mylanahalli, Nelamangala, Bengaluru.";
+            else if (txt.includes('availability')) reply = "Please contact us for the latest availability of plots.";
+            else if (txt.includes('payment')) reply = "We offer flexible payment options. Please contact us for more details.";
+            else if (txt.includes('documents')) reply = "We will provide all necessary documents upon booking.";
+            else if (txt.includes('booking')) reply = "To book a plot, please contact us directly.";
+            else if (txt.includes('visit')) reply = "You can visit our site at Mylanahalli, Nelamangala.";
+            else if (txt.includes('contact')) reply = "You can reach us at +91 6363336313.";
+            else if (txt.includes('hours')) reply = "We are available from 9 AM to 6 PM, Monday to Saturday.";
+            else if (txt.includes('services')) reply = "We offer a range of real estate services including buying, selling, and renting properties.";
+            else if (txt.includes('feedback')) reply = "We appreciate your feedback! Please let us know how we can improve.";
+            else if (txt.includes('complaint')) reply = "We're sorry to hear that. Please provide details so we can assist you.";
+            else if (txt.includes('thank you')) reply = "You're welcome! If you have any more questions, feel free to ask.";
+            else if (txt.includes('bye')) reply = "Goodbye! Have a great day!";
+            else if (txt.includes('hi')) reply = "Hi there! How can I assist you today?";
+            else if (txt.includes('hello')) reply = "Hello! How can I assist you today?";
+            else if (txt.includes('thanks')) reply = "You're welcome! If you have any more questions, feel free to ask.";
+            else if (txt.includes('goodbye')) reply = "Goodbye! Have a great day!";
+            else if (txt.includes('property details')) reply = "Sure! Text us on whatsapp we will share details.";
+            else if (txt.includes('site visit')) reply = "Sure! Text us on whatsapp we will schedule a site visit.";
+            setTimeout(() => appendMessage(reply, 'bot'), 700);
+        }
+
+        toggle.onclick = () => { windowEl.style.display = 'flex'; };
+        close.onclick = () => { windowEl.style.display = 'none'; };
+        form.onsubmit = function(e) {
+            e.preventDefault();
+            const val = input.value.trim();
+            if (!val) return;
+            appendMessage(val, 'user');
+            input.value = '';
+            botReply(val);
+        };
+
+        // Greet on open
+        toggle.addEventListener('click', function() {
+            if (!messages.innerHTML) {
+                appendMessage("Hi!👋Welcome MBS Vasudha properties How can we help you with today?", 'bot');
+            }
+        });
+    })();
+    </script>
+
+
+    <footer>
+        &copy; 2025 MBS Vasudha. All rights reserved.
+    </footer>
+
+     <script src="script.js"></script>
+</body>
+</html>
+
+    <style>
+        .logo {
+            position: absolute;
+            left: 1.6rem;
+            top: 1.6rem;
+            height: 100px;
+            width: 100px;
+            padding: 12px;
+            background: #ffffff;
+            border-radius: 80%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            z-index: 10;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            transform: rotate(0deg);
+        }
+        @media (max-width: 600px) {
+            .logo {
+                left: 0.5rem;
+                top: 0.5rem;
+                height: 100px;
+                width: 100px;
+                padding: 6px;
+            }
+        }
+        header {
+            position: relative;
+        }
+    </style>
+    <style>
+        
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            background: #fff;
+            color: #222;
+        }
+        header {
+           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: #220a9a;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #3c70e0;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 500;
+        }
+        .hero {
+            background: url('/images/hero1.jpg') center/cover no-repeat;
+            color: #000107;
+            padding: 4rem 2rem;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: medium;
+        }
+        .hero h2 {
+    
+            font-size: 2.5rem;
+            margin: 0 0 1rem 0;
+            color: rgb(5, 5, 89);
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #14f808;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-family: 'Trirong', 'Roboto', Arial, sans-serif;
+            letter-spacing: 1.2px;
+            text-shadow: 1px 2px 8px rgba(241, 4, 52, 0.925), 0 1px 0 #e80d0d;
+            background: linear-gradient(90deg, #c2e805 0%, #43c6ac 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: tagline-glow 2.5s ease-in-out infinite alternate;
+            transition: color 0.3s;
+        }
+        @keyframes tagline-glow {
+            0% {
+            text-shadow: 0 2px 8px #ee0a0aed, 0 1px 0 #d00b0bb9;
+            }
+            100% {
+            text-shadow: 0 4px 16px #eaf609, 0 1px 0 #0b0be6da;
+            }
+        }
+        .properties {
+            background: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            max-width: 1100px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+        .property-card {
+            background: #b0dfff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+        .property-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+        }
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .property-info {
+            padding: 1rem;
+        }
+        .property-info h3 {
+            margin: 0 0 0.5rem 0;
+        }
+        .property-info p {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+        .contact {
+            background: #e9ecef;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .contact h2 {
+            margin-bottom: 1rem;
+        }
+        .contact form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .contact input, .contact textarea {
+            padding: 0.75rem;
+            border: 1px solid #b7b7b7;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .contact button {
+            background: #2d6a4f;
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        footer {
+            background: #050603;
+            color: #fdfdfd;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+         #about {
+            background: #f8f9fa;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-family: 'Trirong', serif;
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+            margin: 0 auto;
+        }
+        #about h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: #2f7154;
+            font-weight: bold;
+            font-variant-emoji: all-small-caps;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+            text-decoration: underline;
+            text-decoration-color: #2d6a4f;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+            text-decoration-style:double;
+            text-decoration-skip-ink: auto;
+            text-decoration-skip: ink;
+            
+        }
+    </style>
+
+    <style>
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+        .properties {
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+    }
+    @media (max-width: 700px) {
+        .properties {
+            grid-template-columns: 1fr;
+            padding: 0 0.5rem;
+        }
+        .property-card img {
+            height: 140px;
+        }
+        .property-info {
+            padding: 0.5rem;
+        }
+        .contact form {
+            max-width: 100%;
+        }
+        .hero {
+            padding: 2rem 0.5rem;
+            font-size: 1rem;
+        }
+        header {
+            padding: 1rem 0;
+        }
+        nav a {
+            margin: 0 0.5rem;
+            font-size: 1rem;
+        }
+        #about {
+            font-size: 1rem;
+            padding: 1rem 0.5rem;
+        }
+        footer {
+            font-size: 0.95rem;
+            padding: 0.7rem 0;
+        }
+    }
+    @media (max-width: 400px) {
+        .property-card img {
+            height: 90px;
+        }
+        .hero h2 {
+            font-size: 1.2rem;
+        }
+        .hero p {
+            font-size: 0.9rem;
+        }
+    }
+    </style>
