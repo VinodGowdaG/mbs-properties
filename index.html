@@ -4,31 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MBS PROPERTIES</title>
+  <title>MBS PROPERTIES </title>
 
   <!-- SEO Meta Tags -->
   <meta name="description" content="Explore premium real estate plots and homes with MBS Vasudha in Nelamangala, Bengaluru. Trusted by hundreds for residential and commercial properties.">
   <meta name="keywords" content="MBS Properties, MBS Vasudha, real estate Bengaluru, Nelamangala, Mylanahalli plots, property for sale">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://mbs-properties.netlify.app"> <!-- Or your real domain -->
+  <link rel="canonical" href="https://mbs-properties.netlify.app/"> <!-- Or your real domain -->
 
   <!-- Open Graph Tags for Social Sharing -->
   <meta property="og:title" content="MBS Properties | Real Estate in Bengaluru - MBS Vasudha">
   <meta property="og:description" content="Find your ideal plot or property at MBS Vasudha in Nelamangala. Trusted real estate service in Bengaluru.">
-  <meta property="og:image" content="https://yourdomain.com/images/logo.jpeg"> <!-- Replace with actual image URL -->
-  <meta property="og:url" content="https://mbs-properties.netlify.app"> <!-- Or your real domain -->
+  <meta property="og:image" content="https://yourdomain.com/images/logo.png"> <!-- Replace with actual image URL -->
+  <meta property="og:url" content="https://mbs-properties.netlify.app/"> <!-- Or your real domain -->
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon and Fonts -->
  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-  <link rel="icon" href="/images/logo.jpeg" type="image/jpeg">
+  <link rel="icon" href="/images/logo.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
  
 <body>
     <header>
-        <img class="logo" src="/images/logo.jpeg" alt="MBS Properties Logo">
+        <img class="logo" src="/images/logo.png" alt="MBS Properties Logo">
         <h1>MBS PROPERTIES</h1>
         <p>Your Trusted Real Estate Partners in Bengaluru</p>
     </header>
@@ -107,7 +107,10 @@
                 Premium Residential & Commercial Plots Available at Mylanahalli Village, Nelamangala. &nbsp; • &nbsp;
                 Contact us today for the best deals and personalized service! &nbsp; • &nbsp;
                 Explore our properties and find your dream home! &nbsp; • &nbsp;
-                MBS Vasudha – Building Dreams, One Plot at a Time!
+                MBS Vasudha – Building Dreams, One Plot at a Time! &nbsp; • &nbsp; Contact us for more information! &nbsp;
+                 • &nbsp; Call us at +91 9900014299/9900014588 or email mbsproperties@gmail.com &nbsp; • &nbsp; 
+                 ನಮಸ್ಕಾರ ನೆಲಮಂಗಲ ನಮ್ಮ ಎಂ ಬಿ ಎಸ್ ಪ್ರಾಪರ್ಟೀಸ್ ಗೆ ಸುಸ್ವಾಗತ! 
+
             </span>
         </div>
     </section>
@@ -145,7 +148,7 @@
             transform: translateX(-100%);
         }
     }
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
         .text-marquee span {
             font-size: 1rem;
         }
@@ -217,9 +220,6 @@
         padding-left: 24px;
         padding-right: 24px;
         padding-bottom: 16px;
-        
-
-       
     }
     .slideshow-slide {
         display: none;
@@ -241,20 +241,43 @@
     }
     .slideshow-caption {
         position: absolute;
+        top: 0;
         left: 50%;
-       
-        top: 30px;
         transform: translateX(-50%);
-        background: rgba(107, 167, 223, 0.529);
+        min-width: 60vw;
+        max-width: 90vw;
+        z-index: 3;
         color: #fff;
-        padding: 1rem 2rem;
-        border-radius: 5px;
+        padding: 1rem 2rem 0.7rem 2rem;
+        border-radius: 0 0 18px 18px;
         font-size: 1.3rem;
         font-weight: bold;
         letter-spacing: 0.5px;
-        max-width: 80%;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        box-shadow: none;
         text-align: center;
+        line-height: 1.3;
+        word-break: break-word;
+        font-family: 'Trirong', 'Roboto', Arial, sans-serif;
+        transition: font-size 0.2s, opacity 0.6s cubic-bezier(.4,0,.2,1), transform 0.6s cubic-bezier(.4,0,.2,1);
+        opacity: 0;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+        pointer-events: none;
+    }
+    .slideshow-slide[style*="display: block;"] .slideshow-caption {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        transition-delay: 0.2s;
+    }
+    .slideshow-caption::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(0,0,0,0.55) 80%, rgba(0,0,0,0.08) 100%);
+        border-radius: 0 0 18px 18px;
+        pointer-events: none;
     }
     .slideshow-prev, .slideshow-next {
         cursor: pointer;
@@ -272,7 +295,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 2;
+        z-index: 4;
         transition: background 0.4s;
     }
     .slideshow-prev:hover, .slideshow-next:hover {
@@ -287,8 +310,8 @@
     @media (max-width: 700px) {
         .slideshow-container {
             min-height: 200px;
-            padding-left: 8px;
-            padding-right: 8px;
+            padding-left: 4px;
+            padding-right: 4px;
             padding-bottom: 8px;
         }
         .slideshow-slide img {
@@ -296,13 +319,34 @@
         }
         .slideshow-caption {
             font-size: 1rem;
-            padding: 0.5rem 1rem;
-            bottom: 16px;
+            padding: 0.6rem 0.7rem 0.5rem 0.7rem;
+            border-radius: 0 0 12px 12px;
+            min-width: 80vw;
+            max-width: 98vw;
+            left: 50%;
+            transform: translateX(-50%);
+            text-shadow: 0 1px 4px rgba(0,0,0,0.55);
         }
-        .slideshow-prev, .slideshow-next {
-            width: 32px;
-            height: 32px;
-            font-size: 1.5rem;
+        .slideshow-caption::before {
+            border-radius: 0 0 12px 12px;
+        }
+    }
+    @media (max-width: 400px) {
+        .slideshow-slide img {
+            max-height: 90px;
+        }
+        .slideshow-caption {
+            font-size: 0.85rem;
+            padding: 0.4rem 0.4rem 0.3rem 0.4rem;
+            border-radius: 0 0 8px 8px;
+            min-width: 95vw;
+            max-width: 99vw;
+            left: 50%;
+            transform: translateX(-50%);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+        }
+        .slideshow-caption::before {
+            border-radius: 0 0 8px 8px;
         }
     }
     </style>
@@ -323,6 +367,16 @@
             slides[i].style.display = "none";
         }
         slides[slideIndex-1].style.display = "block";
+        // Force reflow for caption transition
+        const caption = slides[slideIndex-1].querySelector('.slideshow-caption');
+        if (caption) {
+            caption.style.opacity = '0';
+            caption.style.transform = 'translateX(-50%) translateY(-20px)';
+            setTimeout(() => {
+                caption.style.opacity = '1';
+                caption.style.transform = 'translateX(-50%) translateY(0)';
+            }, 10);
+        }
     }
     // Optional: auto slideshow
     setInterval(() => { plusSlides(1); }, 8000);
@@ -333,54 +387,54 @@
             <img src="/images/mp1.JPG" alt="MBS VASUDHA">
             <div class="property-info">
                 <h3>MBS PROPERTIES</h3>
-                <p>MBS | VASUDHA | Concrete Roads</p>
-                <p><strong>Location:</strong>📍Mylanahalli, Nelamangala</p>
-                <p><strong>Price:</strong> ₹----</p>
+                <p><strong> MBS VASUDHA </strong></p>
+                <p><strong>📍Mylanahalli, Nelamangala</strong></p>
+                <p><strong>Bengaluru</strong> </p>
             </div>
         </div>
         <div class="property-card">
             <img src="/images/mp2.JPG" alt="MBS VASUDHA">
             <div class="property-info">
                 <h3>MBS PROPERTIES</h3>
-                <p>MBS | VASUDHA | Play Garden</p>
-                <p><strong>Location:</strong>📍Mylanahalli, Nelamangala</p>
-                <p><strong>Price:</strong> ₹----</p>
+                <p><strong> MBS VASUDHA </strong></p>
+                 <p><strong>📍Mylanahalli, Nelamangala</strong></p>
+                <p><strong>Bengaluru</strong> </p>
             </div>
         </div>
         <div class="property-card">
             <img src="/images/mp3.JPG" alt="MBS VASUDHA">
             <div class="property-info">
                 <h3>MBS PROPERTIES</h3>
-                <p>MBS | VASUDHA | Security OFFICE</p>
-                <p><strong>Location:</strong>📍Mylanahalli, Nelamangala</p>
-                <p><strong>Price:</strong> ₹----</p>
+                <p><strong> MBS VASUDHA </strong></p>
+                <p><strong>📍Mylanahalli, Nelamangala</strong></p>
+                <p><strong>Bengaluru</strong> </p>
             </div>
         </div>
         <div class="property-card">
             <img src="/images/mp4.JPG" alt="MBS VASUDHA">
             <div class="property-info">
                 <h3>MBS PROPERTIES</h3>
-                <p>MBS | VASUDHA | On Construction</p>
-                <p><strong>Location:</strong>📍Mylanahalli, Nelamangala</p>
-                <p><strong>Price:</strong> ₹----</p>
+               <p><strong> MBS VASUDHA </strong></p>
+                 <p><strong>📍Mylanahalli, Nelamangala</strong></p>
+                <p><strong>Bengaluru</strong> </p>
             </div>
         </div>
         <div class="property-card">
             <img src="/images/mp5.JPG" alt="MBS VASUDHA">
             <div class="property-info">
                 <h3>MBS PROPERTIES</h3>
-                <p>MBS | VASUDHA | A Awful View</p>
-                <p><strong>Location:</strong>📍Mylanahalli, Nelamangala</p>
-                <p><strong>Price:</strong> ₹----</p>
+                <p><strong> MBS VASUDHA </strong></p>
+                <p><strong>📍Mylanahalli, Nelamangala</strong></p>
+                <p><strong>Bengaluru</strong> </p>
             </div>
         </div>
         <div class="property-card">
             <img src="/images/mp6.JPG" alt="MBS VASUDHA">
             <div class="property-info">
                 <h3>MBS PROPERTIES</h3>
-                <p>MBS | VASUDHA | Site View</p>
-                <p><strong>Location:</strong>📍Mylanahalli, Nelamangala</p>
-                <p><strong>Price:</strong> ₹----</p>
+                <p><strong> MBS VASUDHA </strong></p>
+                 <p><strong>📍Mylanahalli, Nelamangala</strong></p>
+                <p><strong>Bengaluru</strong> </p>
             </div>
         </div>
     </section>
@@ -408,7 +462,7 @@
             }
             .features-list li {
                 background: #b7e4c7;
-                color: #2d6a4f;
+                color: #822300;
                 padding: 0.75rem 1.5rem;
                 border-radius: 8px;
                 font-size: 1.1rem;
@@ -460,7 +514,7 @@
     <H3>
         <span style="display: inline-block; text-align: center; width: 100%; font-weight: bold; font-size: 2rem;
          background: linear-gradient(90deg, #2d6a4f, #52b788, #b7e4c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
-          <a href="properties.html">OUR PROJECTS</a>  
+          <a href="properties.html">MBS VASUDHA</a>  
         </span>
     </H3>
 </section>
@@ -645,29 +699,35 @@
             const txt = userText.toLowerCase();
             if (txt.includes('details')) reply = "We offer a variety of residential and commercial plots. Please specify what you're looking for.";
             else if (txt.includes('site visit')) reply = "Sure! We can arrange a site visit. Please provide your contact details.";
-            else if (txt.includes('whatsapp')) reply = "You can reach us on WhatsApp at +91 6363336313.";
+            else if (txt.includes('whatsapp')) reply = "You can reach us on WhatsApp at +91 9900014299/9900014588.";
             else if (txt.includes('email')) reply = "You can email us at mbsvasudha@gmail.com.";
-            else if (txt.includes('call')) reply = "You can call us at +91 6363336313.";
-            if (txt.includes('price')) reply = "For pricing details, please call us at +91 6363336313 or email mbsvasudha@info.in.";
-            else if (txt.includes('location')) reply = "We are located at Mylanahalli, Nelamangala, Bengaluru.";
+            else if (txt.includes('call')) reply = "You can call us at +91 9900014299/9900014588.";
+            if (txt.includes('price')) reply = "For pricing details, please call us at +91 9900014299/9900014588 or email mbsvasudha@gmail.com.";
+            else if (txt.includes('location')) reply = "We are located at Mylanahalli Village, Nelamangala, Bengaluru. If you want Location on Google Maps, click <a href='https://www.google.com/maps/place/13%C2%B008'24.9%22N+77%C2%B022'29.8%22E/@13.1402533,77.3723634,17z/data=!3m1!4b1!4m4!3m3!8m2!3d13.1402533!4d77.3749383?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D' target='_blank'>here</a>.";
+            else if (txt.includes('features')) reply = "Our plots come with modern amenities and are located in prime areas.";
+            else if (txt.includes('documents')) reply = "We will provide all necessary documents upon booking.";
             else if (txt.includes('availability')) reply = "Please contact us for the latest availability of plots.";
             else if (txt.includes('payment')) reply = "We offer flexible payment options. Please contact us for more details.";
             else if (txt.includes('documents')) reply = "We will provide all necessary documents upon booking.";
             else if (txt.includes('booking')) reply = "To book a plot, please contact us directly.";
-            else if (txt.includes('visit')) reply = "You can visit our site at Mylanahalli, Nelamangala.";
-            else if (txt.includes('contact')) reply = "You can reach us at +91 6363336313.";
-            else if (txt.includes('hours')) reply = "We are available from 9 AM to 6 PM, Monday to Saturday.";
+            else if (txt.includes('visit')) reply = "You can visit our site at Mylanahalli  village, Nelamangala. We can also arrange a site visit for you.";
+            else if (txt.includes('brochure')) reply = "Sure! Text us on whatsapp we will share the brochure.";
+            else if (txt.includes('brochures')) reply = "Sure! Text us on whatsapp we will share the brochures.";
+            else if (txt.includes('documents')) reply = "We will provide all necessary documents upon booking.";
+            else if (txt.includes('booking')) reply = "To book a plot, please contact us directly.";
+            else if (txt.includes('visit')) reply = "You can visit our site at Mylanahalli village, Nelamangala. We can also arrange a site visit for you.";
+            else if (txt.includes('hours')) reply = "We are available from 9 AM to 6 PM, Monday to Sunday.";
             else if (txt.includes('services')) reply = "We offer a range of real estate services including buying, selling, and renting properties.";
             else if (txt.includes('feedback')) reply = "We appreciate your feedback! Please let us know how we can improve.";
             else if (txt.includes('complaint')) reply = "We're sorry to hear that. Please provide details so we can assist you.";
             else if (txt.includes('thank you')) reply = "You're welcome! If you have any more questions, feel free to ask.";
             else if (txt.includes('bye')) reply = "Goodbye! Have a great day!";
-            else if (txt.includes('hi')) reply = "Hi there! How can I assist you today?";
-            else if (txt.includes('hello')) reply = "Hello! How can I assist you today?";
+            else if (txt.includes('hi')) reply = "Hi there! How can I assist you today? Thanks for reaching out to MBS Vasudha properties!";
+            else if (txt.includes('hello')) reply = "Hello! How can I assist you today? what can I help you with?";
             else if (txt.includes('thanks')) reply = "You're welcome! If you have any more questions, feel free to ask.";
             else if (txt.includes('goodbye')) reply = "Goodbye! Have a great day!";
             else if (txt.includes('property details')) reply = "Sure! Text us on whatsapp we will share details.";
-            else if (txt.includes('site visit')) reply = "Sure! Text us on whatsapp we will schedule a site visit.";
+            else if (txt.includes('site visit')) reply = "Sure! Text us on whatsapp we will schedule a site visit for you.";
             setTimeout(() => appendMessage(reply, 'bot'), 700);
         }
 
@@ -685,7 +745,7 @@
         // Greet on open
         toggle.addEventListener('click', function() {
             if (!messages.innerHTML) {
-                appendMessage("Hi!👋Welcome MBS Vasudha properties How can we help you with today?", 'bot');
+                appendMessage("Hi!👋Welcome MBS Properties How can we help you with today?", 'bot');
             }
         });
     })();
@@ -708,9 +768,8 @@
             height: 100px;
             width: 100px;
             padding: 12px;
-            background: #ffffff;
-            border-radius: 80%;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            background: #00eeffc6;
+            border-radius: 60px;
             z-index: 10;
             object-fit: contain;
             transition: transform 0.3s ease;
@@ -806,7 +865,7 @@
             padding: 0 1rem;
         }
         .property-card {
-            background: #b0dfff;
+            background: #a7d3f081;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.07);
             overflow: hidden;
