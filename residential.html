@@ -5,54 +5,154 @@
     <title>Upcoming Project - MBS Vasudha</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        :root {
+            --primary: #2d4a6a;
+            --accent: #1e7e34;
+            --bg: #f7f7f7;
+            --container-bg: #fff;
+        }
         body {
             font-family: Arial, sans-serif;
-            background: #f7f7f7;
+            background: var(--bg);
             margin: 0;
             padding: 0;
         }
         .container {
             max-width: 700px;
             margin: 60px auto;
-            background: #fff;
+            background: var(--container-bg);
             padding: 40px 30px;
             border-radius: 10px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
         nav a {
             text-decoration: none;
-            color: #2d4a6a;
+            color: var(--primary);
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin: 0 15px;
+            transition: color 0.2s;
+            display: inline-block;
+            padding: 8px 0;
+        }
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+        header {
+            text-align: center;
+            padding: 20px 10px;
+            background: linear-gradient(90deg, #e3f0ff 0%, #f7f7f7 100%);
+            border-bottom: 1px solid #e0e0e0;
         }
         h1 {
-            color: #2d4a6a;
-            margin-bottom: 16px;
-        }
-        p {
-            color: #444;
-            font-size: 1.1em;
-            line-height: 1.7;
+            color: var(--primary);
+            margin: 0 0 10px 0;
+            font-size: 2em;
         }
         .highlight {
-            color: #1e7e34;
+            color: var(--accent);
             font-weight: bold;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            width: 40%;
+            max-width: 200px;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.95em;
+            color: #888;
+        }
+        /* Responsive Styles */
+        @media (max-width: 800px) {
+            .container {
+                max-width: 95vw;
+                padding: 25px 10px;
+            }
+            .logo-container img {
+                width: 60%;
+            }
+        }
+        @media (max-width: 500px) {
+            header {
+                padding: 12px 4px;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
+            nav a {
+                font-size: 1em;
+                margin: 0 8px;
+            }
+            .logo-container img {
+                width: 90%;
+            }
+            .container {
+                padding: 15px 2vw;
+                margin: 20px auto;
+            }
+        }
+        /* Hamburger menu styles */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            margin: 0 auto 10px auto;
+        }
+        .hamburger span {
+            display: block;
+            height: 4px;
+            width: 100%;
+            background: var(--primary);
+            margin: 6px 0;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        @media (max-width: 600px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                background: var(--container-bg);
+                border-radius: 0 0 10px 10px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+                margin-bottom: 10px;
+            }
+            nav.show {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
-    <header style="text-align: center; padding: 20px;">
+    <header>
         <h1>MBS Vasudha Residential Project</h1>
         <p>Your future home awaits!</p>
     </header>
-    <nav style="text-align: center; margin-bottom: 20px;">
-        <a href="index.html" style="margin-right: 20px;">Home</a>
-        <a href="about.html" style="margin-right: 20px;">About Us</a>
+    <div class="hamburger" id="hamburger" aria-label="Open navigation" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
         <a href="properties.html">Projects</a>
     </nav>
-    <div style="text-align: center; margin-bottom: 20px;">
-        <img src="images/mbs-vasudha.jpg" alt="MBS Vasudha" style="width: 20%; max-width: 600px; border-radius: 10px;">
+    <div class="logo-container">
+        <img src="images/logo2.jpeg" alt="MBS Vasudha">
     </div>
     <div class="container">
         <h1>Upcoming Project: MBS Vasudha Residential</h1>
@@ -63,14 +163,35 @@
             Stay tuned for more updates on project features, amenities, and launch dates. We look forward to welcoming you to your future home at MBS Vasudha!
         </p>
     </div>
-
+   
+    <footer>
+        <p>&copy; 2025 MBS Vasudha. All rights reserved. || Designed by <a href="https://github.com/VinodGowdaG" target="_blank" style="color: #2d6a4f; text-decoration: none;">Vinod Gowda G</a></p>
+    </footer>
     <script>
-        // Example of a simple script to enhance user experience
+        // Hamburger menu toggle for mobile
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('mainNav');
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+        hamburger.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                nav.classList.toggle('show');
+            }
+        });
+
+        // Highlight current page in nav
+        const links = nav.querySelectorAll('a');
+        links.forEach(link => {
+            if (window.location.pathname.endsWith(link.getAttribute('href'))) {
+                link.classList.add('active');
+            }
+        });
+
+        // Example: Welcome message in console
         document.addEventListener('DOMContentLoaded', function() {
             console.log("Welcome to MBS Vasudha Residential Project Page!");
         });
     </script>
-    <footer style="text-align: center; margin-top: 20px;">
-        <p>&copy; 2023 MBS Vasudha. All rights reserved.</p>
 </body>
 </html>

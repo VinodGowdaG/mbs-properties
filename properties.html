@@ -30,7 +30,7 @@
   <header>
     <nav class="navbar animated-navbar">
         <a href="/">
-            <img src="images/mbs-vasudha-bg-remove-logo.png" alt="MBS VASUDHA" style="height:100px; display:block; width:200px; border-radius:5%; margin-right: 2rem;" />
+            <img src="images/logo1.jpeg" alt="MBS VASUDHA" style="height:100px; display:block; width:200px; border-radius:5%; margin-right: 2rem;" />
         </a>
       <div class="logo">MBS VASUDHA</div>
       <ul class="nav-links">
@@ -119,9 +119,9 @@
   <section class="brochure-section" style="text-align:center; margin: 2rem 0;">
     <h2 style="color:#042b60; background:#eee; display:inline-block; padding:0.5rem 1.5rem; border-radius:8px; margin-bottom:1rem;">Download Project Brochure</h2>
     <div>
-    <a href="images/Vinod.pdf" target="_blank" style="display:inline-block; background:#710808; color:#fff; padding:0.75rem 2rem; border-radius:8px; font-size:1.1rem; font-weight:600; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.08); transition:background 0.2s;">
+    <a href="images/MBS-Vasudha.pdf" target="_blank" style="display:inline-block; background:#710808; color:#fff; padding:0.75rem 2rem; border-radius:8px; font-size:1.1rem; font-weight:600; text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,0.08); transition:background 0.2s;">
       <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/adobeacrobatreader.svg" alt="PDF" style="width:24px;height:24px;vertical-align:middle;margin: right 0.5rem;filter:invert(1);" />
-      Download Brochure(PDF)
+    Brochure(PDF)
     </a>
   </div>
     </section>
@@ -133,10 +133,10 @@
       <h1>Residential Projects in ನಮ್ಮ ಬೆಂಗಳೂರು</h1>
     </div>
     <div class="action-bar">
-      <div onclick="alert('Call to this number: +91 9900014299/9900014588')" style="color: #ffffff; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">
+      <a href="tel:+919035248178" style="color: #ffffff; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">
         <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/svgs/solid/phone-volume.svg" alt="Call" style="width:24px;height:24px;filter:invert(1);"/>Call
-      </div>
-      <a href="https://wa.me/916363335313?text=I%20have%20a%20question%20about%20your%20services." target="_blank" style="color: #fff; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">
+      </a>
+      <a href="https://wa.me/919035248178?text=I%20have%20a%20question%20about%20your%20services." target="_blank" style="color: #fff; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">
     <img src="images/whatsapp.png" alt="Chat on WhatsApp" width="35" height="35">Whatsapp
       </a>
       <a href="https://www.instagram.com/vinod_g_gowda/" target="_blank" style="color: #fff; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">
@@ -217,13 +217,13 @@
 
       setTimeout(() => {
         if (userMessages[normalized] > 1) {
-          addBotMsg("Please call 9900014299/9900014588 number for more information.");
+          addBotMsg("Please call 9035248178 number for more information.");
         } else if (userMessages[normalized] === 1) {
           addBotMsg("Thank you for your message! We will get back to you shortly.");
         } else if (userMessages[normalized] > 2) {
-          addBotMsg("We appreciate your interest! call 9900014299/9900014588 number for more information.");
+          addBotMsg("We appreciate your interest! call 9035248178 number for more information.");
         } else if (userMessages[normalized] > 3) {
-          addBotMsg("For urgent inquiries, please call us at 9900014299/9900014588.");
+          addBotMsg("For urgent inquiries, please call us at 9035248178.");
         } else {
           addBotMsg("Welcome to MBS Vasudha Properties! How can we assist you today?");
         }
@@ -241,7 +241,7 @@
 
 
   <footer>
-    <p>&copy; 2025 MBS Vasudha. All rights reserved.</p>
+    <p>&copy; 2025 MBS Vasudha. All rights reserved. || Designed by <a href="https://github.com/VinodGowdaG" target="_blank" style="color: #2d6a4f; text-decoration: none;">Vinod Gowda G</a></p>
   </footer>
 </body>
 </html>
@@ -617,3 +617,77 @@
     });
   });
   </script>
+
+  <!-- Additional responsive tweaks for mobile friendliness -->
+  <style>
+    /* Ensure html and body take full height */
+    html, body {
+      height: 100%;
+      min-height: 100%;
+    }
+    /* Prevent horizontal scroll */
+    body {
+      overflow-x: hidden;
+    }
+    /* Responsive padding for main sections */
+    section, .projects, .hero, .breadcrumbs {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    /* Responsive images in project cards */
+    .project-image img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      display: block;
+    }
+    /* Adjust navbar logo size on mobile */
+    @media (max-width: 600px) {
+      .navbar img {
+        height: 60px !important;
+        width: 120px !important;
+        margin-right: 1rem !important;
+      }
+      .navbar .logo {
+        font-size: 1rem !important;
+      }
+    }
+    /* Make PDF button and brochure section responsive */
+    .brochure-section h2 {
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .brochure-section a {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    /* Responsive chatbot button */
+    #chatbot-toggle img {
+      width: 28px !important;
+      height: 28px !important;
+    }
+    /* Ensure chatbot window fits on small screens */
+    @media (max-width: 400px) {
+      #chatbot-window {
+        width: 98vw !important;
+        height: 50vh !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+      }
+    }
+    /* Improve tap targets for action bar */
+    .action-bar a, .action-bar div {
+      min-height: 44px;
+      min-width: 44px;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+    }
+    /* Fix for iOS input zoom */
+    input[type="text"] {
+      font-size: 16px;
+    }
+  </style>

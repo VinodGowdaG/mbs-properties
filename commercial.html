@@ -2,39 +2,383 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Upcoming Project</title>
+    <title>COMMERCIAL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/v4-shims.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/v4-shims.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/images/logo1.jpeg" alt="MBS Vasudha Logo" style="width: 150px; height: auto;">
+        </div>
+        <nav class="navbar"></nav>
+            <a href="index.html">Home</a>
+            <a href="index.html">About Us</a>
+            <a href="projects.html">Projects</a>
+            <a href="index.html">Contact</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="fas fa-bars"></span>
+            </button>
+        </nav>
+    </header>
+    <style>
+        header {
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            display: flex;
+            align-items: center;
+            justify-content: normal;
+            gap: 20px;
+            padding: 16px 20px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #2d3e50;
+            font-size: 1.1em;
+            font-weight: 500;
+            background: linear-gradient(90deg, #e3f0ff 0%, #f7f7f7 100%);
+            border-radius: 0 0 10px 10px;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo-container {
+            margin-left: 32px;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            margin-right: 20px;
+            position: relative;
+        }
+        .navbar a {
+            color: #2d3e50;
+            font-weight: 500;
+            padding: 8px 18px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+            font-size: 1.08em;
+        }
+        .navbar a:hover {
+            background: #1976d2;
+            color: #fff;
+        }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.7em;
+            color: #2d3e50;
+            cursor: pointer;
+            margin-left: 12px;
+        }
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 8px 0;
+            }
+            .logo-container {
+                margin-left: 16px;
+                margin-bottom: 6px;
+            }
+            .navbar {
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                margin-right: 0;
+            }
+            .navbar a {
+                width: 100%;
+                padding: 12px 18px;
+                border-radius: 0;
+                font-size: 1em;
+            }
+            .nav-toggle {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 18px;
+            }
+            .navbar a {
+                display: none;
+            }
+            .navbar.open a {
+                display: block;
+            }
+        }
+    </style>
+    <script>
+        // Responsive navbar toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('.navbar');
+            const toggle = document.querySelector('.nav-toggle');
+            if (toggle) {
+                toggle.addEventListener('click', function() {
+                    nav.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+    <div class="container">
+        <h1 class="fade-in">MBS PROPERTIES - COMMERCIAL</h1>
+        <p class="fade-in delay-1">This is our upcoming project. Stay tuned for more updates!</p>
+        <section class="slide-up"></section>
+            <h2>Project Details</h2>
+            <p>We are excited to announce our upcoming commercial project, designed to redefine modern business spaces. This project will feature state-of-the-art facilities, eco-friendly designs, and a prime location that ensures maximum visibility and accessibility.</p>
+            <p>Our vision is to create a vibrant business hub that fosters innovation and collaboration. The project will include flexible office spaces, retail areas, and recreational facilities, all designed to enhance productivity and well-being.</p>
+            <p>Stay tuned for more updates as we embark on this exciting journey to bring a new standard of excellence in commercial real estate.</p>
+        </section>
+        <section class="slide-up delay-1"></section>
+            <h2>Contact Us</h2>
+            <p>For inquiries and more information about our upcoming project, please contact us at:</p>
+            <p>Email: <a href="mailto:vinodgowdag351@gmail.com">vinodgowdag351@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919035248178">+91 90352 48178</a></p>
+            <p>We look forward to hearing from you!</p>
+        </section>
+        <section class="slide-up delay-2"></section>
+            <h2>Follow Us</h2>
+            <p>Stay connected with us for the latest updates:</p>
+            <p>
+                <a href="https://www.facebook.com/mbsvasudha" target="_blank"><i class="fab fa-facebook"></i> Facebook</a><br>
+                <a href="https://www.instagram.com/mbsvasudha" target="_blank"><i class="fab fa-instagram"></i> Instagram</a><br>
+                <a href="https://www.linkedin.com/company/mbsvasudha" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </p>
+        </section>
+        <section class="slide-up delay-3"></section>
+            <h2>Location</h2>
+            <p>Our upcoming project is strategically located in the heart of the city, ensuring easy access to major transportation hubs and business districts.</p>
+            <p>Address: MBS Vasudha, Mylanahalli</p>
+            <div style="margin-top:20px;">
+                <iframe src="https://www.google.com/maps?q=12.9577,77.7019&hl=en&z=16&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section class="slide-up delay-4"></section>
+            <h2>Project Timeline</h2>
+            <p>We are currently in the planning phase and expect to break ground in the coming months. The project is scheduled for completion by End of July 2025.</p>
+        </section>
+        <section class="slide-up delay-5"></section>
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>Q: What types of spaces will be available?</strong></p>
+            <p>A: The project will offer a variety of office spaces, retail areas, and recreational facilities to cater to diverse business needs.</p>
+            <p><strong>Q: How can I stay updated on the project progress?</strong></p>
+            <p>A: Follow us on our social media channels or subscribe to our newsletter for the latest updates.</p>
+        </section>
+        <section class="slide-up delay-6"></section>
+            <h2>Testimonials</h2>
+            <p>"We are thrilled to be part of this innovative project. The design and vision align perfectly with our business goals." - Ravindra S V</p>
+            <p>"MBS Vasudha has always been a leader in commercial real estate, and this upcoming project is no exception." - Parashuram </p>
+        </section>
+        <section class="slide-up delay-7"></section>
+            <h2>Media Coverage</h2>
+            <p>Our upcoming project has been featured in various media outlets. Check out the articles below:</p>
+            <ul>
+                <li><a href="https://example.com/article1" target="_blank">Article 1: MBS Vasudha's Vision for the Future</a></li>
+                <li><a href="https://example.com/article2" target="_blank">Article 2: Redefining Commercial Spaces</a></li>
+            </ul>
+        </section>
+    </div>
+    <footer style="text-align: center; margin-top: 20px; color: #888;">
+        <p>&copy; 2025 MBS Vasudha. All rights reserved. || Designed With <i class="fas fa-heart" style="color: red;"></i>by <a href="https://github.com/VinodGowdaG" target="_blank" style="color: #2d6a4f; text-decoration: none;">Vinod Gowda G</a></p>
+        
+    </footer>
     <style>
         body {
-            background: #f5f5f5;
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dad9d9d3 60%, #d6dde6ef 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
             display: flex;
-            height: 100vh;
+            flex-direction: column;
+            min-height: 100vh;
             margin: 0;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
         .container {
-            background: #fff;
+            background: #ffffff;
             padding: 40px 60px;
-            border-radius: 12px;
-            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
             text-align: center;
+            margin-top: 40px;
+            width: 90%;
+            max-width: 900px;
+            animation: pop-in 1s cubic-bezier(.68,-0.55,.27,1.55);
         }
-        h1 {
+        h1, h2 {
             color: #2d3e50;
             margin-bottom: 16px;
         }
-        p {
-            color: #555;
+        h1 {
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 32px;
+        }
+        p, ul {
+            color: #5e4949;
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        a {
+            color: #1976d2;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #0d47a1;
+            text-decoration: underline;
+        }
+        section {
+            margin-bottom: 32px;
+            background: #506173ba;
+            border-radius: 10px;
+            padding: 24px 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            transition: box-shadow 0.3s;
+        }
+        section:hover {
+            box-shadow: 0 4px 16px rgba(244, 39, 11, 0.484);
+        }
+        ul {
+            list-style: disc inside;
+            padding-left: 0;
+        }
+        iframe {
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .fab, .fas {
+            margin-right: 8px;
             font-size: 1.2em;
+            vertical-align: middle;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        @keyframes pop-in {
+            0% { transform: scale(0.95); opacity: 0;}
+            100% { transform: scale(1); opacity: 1;}
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        .fade-in.delay-1 { animation-delay: 0.3s; }
+        .slide-up {
+            opacity: 0;
+            animation: slideUp 1s forwards;
+        }
+        .slide-up.delay-1 { animation-delay: 0.2s; }
+        .slide-up.delay-2 { animation-delay: 0.4s; }
+        .slide-up.delay-3 { animation-delay: 0.6s; }
+        .slide-up.delay-4 { animation-delay: 0.8s; }
+        .slide-up.delay-5 { animation-delay: 1s; }
+        .slide-up.delay-6 { animation-delay: 1.2s; }
+        .slide-up.delay-7 { animation-delay: 1.4s; }
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .container {
+                padding: 30px 20px;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 4vw;
+                border-radius: 8px;
+            }
+            h1 {
+                font-size: 1.7em;
+            }
+            h2 {
+                font-size: 1.1em;
+            }
+            section {
+                padding: 12px 4px;
+            }
+            iframe {
+                height: 180px;
+            }
+        }
+        footer {
+            font-size: 0.95em;
+            margin-bottom: 16px;
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Upcoming Project</h1>
-        <p>This is our upcoming project. Stay tuned for more updates!</p>
-    </div>
+    <script>
+        // Animate on scroll for sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const options = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                section.style.animationPlayState = 'paused';
+                observer.observe(section);
+            });
+
+            // Animate fade-in for h1 and intro p
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.animationPlayState = 'running';
+            });
+
+            // Responsive nav menu (if needed in future)
+            // Example: Add a scroll-to-top button
+            const scrollBtn = document.createElement('button');
+            scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            scrollBtn.style.position = 'fixed';
+            scrollBtn.style.bottom = '30px';
+            scrollBtn.style.right = '30px';
+            scrollBtn.style.background = '#1976d2';
+            scrollBtn.style.color = '#fff';
+            scrollBtn.style.border = 'none';
+            scrollBtn.style.borderRadius = '50%';
+            scrollBtn.style.width = '48px';
+            scrollBtn.style.height = '48px';
+            scrollBtn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
+            scrollBtn.style.cursor = 'pointer';
+            scrollBtn.style.display = 'none';
+            scrollBtn.style.zIndex = '1000';
+            scrollBtn.title = 'Back to top';
+            document.body.appendChild(scrollBtn);
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    scrollBtn.style.display = 'block';
+                } else {
+                    scrollBtn.style.display = 'none';
+                }
+            });
+            scrollBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Welcome message
+            console.log("Welcome to MBS Vasudha Upcoming Project Page!");
+        });
+    </script>
 </body>
 </html>
