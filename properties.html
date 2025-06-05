@@ -6,7 +6,7 @@
 
   <title>MBS Properties - MBS Vasudha</title>
 
-  <!-- SEO Meta Tags -->
+<!-- SEO Meta Tags -->
   <meta name="description" content="Explore premium real estate plots and homes with MBS Vasudha in Nelamangala, Bengaluru. Trusted by hundreds for residential and commercial properties.">
   <meta name="keywords" content="MBS Properties, MBS Vasudha, real estate Bengaluru, Nelamangala, Mylanahalli plots, property for sale">
   <meta name="robots" content="index, follow">
@@ -16,13 +16,15 @@
   <meta property="og:title" content="MBS Properties | Real Estate in Bengaluru - MBS Vasudha">
   <meta property="og:description" content="Find your ideal plot or property at MBS Vasudha in Nelamangala. Trusted real estate service in Bengaluru.">
   <meta property="og:image" content="https://yourdomain.com/images/logo1.jpeg"> <!-- Replace with actual image URL -->
-  <meta property="og:url" content="https://mbs-properties.netlify.app"> <!-- Or your real domain -->
+  <meta property="og:url" content="https://mbs-properties.netlify.app/"> <!-- Or your real domain -->
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon and Fonts -->
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
   <link rel="icon" href="/images/logo1.jpeg" type="image/jpeg">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
 </head>
 <!-- Start of HTML Document -->
 <body>
@@ -128,7 +130,7 @@
   <!-- Hero Banner -->
   <section class="hero">
     <div class="hero-text">
-      <h1>Residential Projects in ನಮ್ಮ ಬೆಂಗಳೂರು</h1>
+      <h1>Projects in ನಮ್ಮ ಬೆಂಗಳೂರು</h1>
     </div>
     <div class="action-bar">
       <a href="tel:+919035248178" style="color: #ffffff; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">
@@ -152,90 +154,103 @@
     </div>
   </section>
    
-  <!-- Chatbot Widget -->
-  <div id="chatbot-container" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999;">
-    <button id="chatbot-toggle" style="background: #ffffff; color: #fff; border: none; border-radius: 50%; width: 56px; height: 56px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); cursor: pointer; display: flex; align-items: center; justify-content: center;">
-      <img src="/images/chtbt.jpg" alt="Chatbot" width="35" height="35" border-radius="80px" />
-    </button>
-    <div id="chatbot-window" style="display:none; width:320px; max-width:90vw; height:420px; max-height:70vh; background:#fff; border-radius:16px; box-shadow:0 4px 24px rgba(0,0,0,0.15); overflow:hidden; margin-bottom:8px; display:flex; flex-direction:column;">
-      <div id="chatbot-messages" style="flex:1; padding:1rem; overflow-y:auto; font-size:1rem;"></div>
-      <form id="chatbot-form" style="display:flex; border-top:1px solid #eee;">
-        <input id="chatbot-input" type="text" placeholder="Type your message..." autocomplete="off" style="flex:1; border:none; padding:0.75rem; font-size:1rem; outline:none;">
-        <button type="submit" style="background:#710808; color:#fff; border:none; padding:0 1rem; font-size:1rem; cursor:pointer;">Send</button>
-      </form>
+ <!-- Simple Chatbot Widget -->
+    <div id="chatbot-container" style="position:fixed;bottom:24px;right:24px;z-index:9999;">
+        <button id="chatbot-toggle" style="background:#131413ce;color:#fff;border:none;border-radius:50%;width:56px;height:56px;box-shadow:0 2px 8px rgba(0,0,0,0.18);font-size:2rem;cursor:pointer;">
+            💬
+        </button>
+        <div id="chatbot-window" style="display:none;width:320px;max-width:90vw;height:400px;background:#fff;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.18);padding:0;overflow:hidden;flex-direction:column;">
+            <div style="background:#2d6a4f;color:#fff;padding:1rem;font-weight:bold;display:flex;justify-content:space-between;align-items:center;">
+                Chat With MBS Vasudha Chatbot!
+                <span id="chatbot-close" style="cursor:pointer;font-size:1.2rem;">&times;</span>
+            </div>
+            <div id="chatbot-messages" style="flex:1;overflow-y:auto;padding:1rem;background:#f6f6f6;font-size:1rem;"></div>
+            <form id="chatbot-form" style="display:flex;border-top:1px solid #e0e0e0;">
+                <input id="chatbot-input" type="text" placeholder="Type your message..." autocomplete="off" style="flex:1;padding:0.75rem;border:none;font-size:1rem;">
+                <button type="submit" style="background:#2d6a4f;color:#fff;border:none;padding:0 1rem;font-size:1.2rem;cursor:pointer;">➤</button>
+            </form>
+        </div>
     </div>
-  </div>
-  <script>
-    const toggleBtn = document.getElementById('chatbot-toggle');
-    const chatbotWin = document.getElementById('chatbot-window');
-    const messages = document.getElementById('chatbot-messages');
-    const form = document.getElementById('chatbot-form');
-    const input = document.getElementById('chatbot-input');
+    <script>
+    (function() {
+        const toggle = document.getElementById('chatbot-toggle');
+        const windowEl = document.getElementById('chatbot-window');
+        const close = document.getElementById('chatbot-close');
+        const form = document.getElementById('chatbot-form');
+        const input = document.getElementById('chatbot-input');
+        const messages = document.getElementById('chatbot-messages');
 
-    // Track user messages
-    const userMessages = {};
-
-    // Ensure chatbot is hidden on load
-    chatbotWin.style.display = 'none';
-
-    toggleBtn.onclick = function() {
-      chatbotWin.style.display = chatbotWin.style.display === 'none' ? 'flex' : 'none';
-      if (chatbotWin.style.display === 'flex' && messages.childElementCount === 0) {
-        addBotMsg("Welcome to MBS Vasudha Properties! How can we assist you today?");
-      }
-    };
-
-    function addUserMsg(text) {
-      const div = document.createElement('div');
-      div.style.margin = '0.5rem 0';
-      div.style.textAlign = 'right';
-      div.innerHTML = `<span style="background:#710808;color:#fff;padding:0.5rem 1rem;border-radius:16px 16px 0 16px;display:inline-block;max-width:80%;">${text}</span>`;
-      messages.appendChild(div);
-      messages.scrollTop = messages.scrollHeight;
-    }
-
-    function addBotMsg(text) {
-      const div = document.createElement('div');
-      div.style.margin = '0.5rem 0';
-      div.style.textAlign = 'left';
-      div.innerHTML = `<span style="background:#eee;color:#333;padding:0.5rem 1rem;border-radius:16px 16px 16px 0;display:inline-block;max-width:80%;">${text}</span>`;
-      messages.appendChild(div);
-      messages.scrollTop = messages.scrollHeight;
-    }
-
-    form.onsubmit = function(e) {
-      e.preventDefault();
-      const userText = input.value.trim();
-      if (!userText) return;
-      addUserMsg(userText);
-
-      // Normalize input for tracking (case-insensitive, trimmed)
-      const normalized = userText.toLowerCase().replace(/\s+/g, ' ').trim();
-      userMessages[normalized] = (userMessages[normalized] || 0) + 1;
-
-      setTimeout(() => {
-        if (userMessages[normalized] > 1) {
-          addBotMsg("Please call 9035248178 number for more information.");
-        } else if (userMessages[normalized] === 1) {
-          addBotMsg("Thank you for your message! We will get back to you shortly.");
-        } else if (userMessages[normalized] > 2) {
-          addBotMsg("We appreciate your interest! call 9035248178 number for more information.");
-        } else if (userMessages[normalized] > 3) {
-          addBotMsg("For urgent inquiries, please call us at 9035248178.");
-        } else {
-          addBotMsg("Welcome to MBS Vasudha Properties! How can we assist you today?");
+        function appendMessage(text, from) {
+            const msg = document.createElement('div');
+            msg.style.margin = '0.5rem 0';
+            msg.style.textAlign = from === 'user' ? 'right' : 'left';
+            msg.innerHTML = `<span style="display:inline-block;max-width:80%;padding:0.5rem 1rem;border-radius:16px;background:${from==='user'?'#b7e4c7':'#fff'};color:#222;">${text}</span>`;
+            messages.appendChild(msg);
+            messages.scrollTop = messages.scrollHeight;
         }
-      }, 600);
-      input.value = '';
-    };
 
-    // Responsive: close on outside click (optional)
-    document.addEventListener('click', function(e) {
-      if (!document.getElementById('chatbot-container').contains(e.target) && chatbotWin.style.display !== 'none') {
-        chatbotWin.style.display = 'none';
-      }
-    });
-  </script>
+        function botReply(userText) {
+            let reply = "Thank you for reaching out! We'll get back to you soon.";
+            if (!userText) return;
+            if (userText.toLowerCase().includes('hi')) reply = "Hi there! How can I assist you today?";
+            else if (userText.toLowerCase().includes('hello')) reply = "Hello! How can I assist you today?";
+            else if (userText.toLowerCase().includes('hey')) reply = "Hey! What can I help you with?";
+            else if (userText.toLowerCase().includes('hi there')) reply = "Hi there! How can I assist you today?";
+            else if (userText.toLowerCase().includes('hello')) reply = "Hello! How can I assist you today?";
+            const txt = userText.toLowerCase();
+            if (txt.includes('details')) reply = "We offer a variety of residential and commercial plots. Please specify what you're looking for.";
+            else if (txt.includes('whatsapp')) reply = "You can reach us on WhatsApp at +91 9035248178. <a href='https://wa.me/919035248178?text=I%20have%20a%20question%20about%20your%20services.' target='_blank'>Chat on WhatsApp</a>";
+            else if (txt.includes('email')) reply = "You can email us at mbsvasudha@gmail.com.";
+            else if (txt.includes('call')) reply = "You can call us at <a href='tel:+919035248178'>+91 9035248178</a>.";
+            else if (txt.includes('contact')) reply = "You can contact us via <a href='tel:+919035248178'>phone</a>, <a href='mailto:mbs.vinod@gmail.com'>email</a>, or <a href='https://wa.me/919035248178?text=I%20have%20a%20question%20about%20your%20services.' target='_blank'>WhatsApp</a>.";
+
+            if (txt.includes('price')) reply = "For pricing details, please call us at +91 9035248178 or email mbsvasudha@gmail.com.";
+            else if (txt.includes('location')) reply = "We are located at Mylanahalli Village, Nelamangala, Bengaluru. If you want Location on Google Maps, click <a href='https://www.google.com/maps/place/13%C2%B008'24.9%22N+77%C2%B022'29.8%22E/@13.1402533,77.3723634,17z/data=!3m1!4b1!4m4!3m3!8m2!3d13.1402533!4d77.3749383?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D' target='_blank'>here</a>.";
+            else if (txt.includes('features')) reply = "Our plots come with modern amenities and are located in prime areas.";
+            else if (txt.includes('documents')) reply = "We will provide all necessary documents upon booking.";
+            else if (txt.includes('availability')) reply = "Please contact us for the latest availability of plots.";
+            else if (txt.includes('payment')) reply = "We offer flexible payment options. Please contact us for more details.";
+            else if (txt.includes('documents')) reply = "We will provide all necessary documents upon booking.";
+            else if (txt.includes('booking')) reply = "To book a plot, please contact us directly.";
+            else if (txt.includes('brochure')) reply = "You can download our brochure <a href='images/MBS-Vasudha.pdf' target='_blank'>here</a>. Or text us on WhatsApp and we will share the brochure.";
+            else if (txt.includes('brochures')) reply = "Sure! Text us on whatsapp we will share the brochures.";
+            else if (txt.includes('documents')) reply = "We will provide all necessary documents upon booking.";
+            else if (txt.includes('booking')) reply = "To book a plot, please contact us directly.";
+            else if (txt.includes('visit')) reply = "You can visit our site at Mylanahalli village, Nelamangala. We can also arrange a site visit for you.";
+            else if (txt.includes('hours')) reply = "We are available from 9 AM to 6 PM, Monday to Sunday.";
+            else if (txt.includes('services')) reply = "We offer a range of real estate services including buying, selling, and renting properties.";
+            else if (txt.includes('feedback')) reply = "We appreciate your feedback! Please let us know how we can improve.";
+            else if (txt.includes('complaint')) reply = "We're sorry to hear that. Please provide details so we can assist you.";
+            else if (txt.includes('thank you')) reply = "You're welcome! If you have any more questions, feel free to ask.";
+            else if (txt.includes('bye')) reply = "Goodbye! Have a great day!";
+            else if (txt.includes('hi')) reply = "Hi there! How can I assist you today? Thanks for reaching out to MBS Vasudha properties!";
+            else if (txt.includes('hello')) reply = "Hello! How can I assist you today? what can I help you with?";
+            else if (txt.includes('thanks')) reply = "You're welcome! If you have any more questions, feel free to ask.";
+            else if (txt.includes('goodbye')) reply = "Goodbye! Have a great day!";
+            else if (txt.includes('property details')) reply = "Sure! Text us on whatsapp we will share details.";
+            else if (txt.includes('Whatsapp')) reply = "Sure! Text us on whatsapp we will schedule a site visit for you. <a href='https://wa.me/919035248178?text=I%20would%20like%20to%20schedule%20a%20site%20visit.' target='_blank'>Chat on WhatsApp</a>";
+            setTimeout(() => appendMessage(reply, 'bot'), 700);
+        }
+
+        toggle.onclick = () => { windowEl.style.display = 'flex'; };
+        close.onclick = () => { windowEl.style.display = 'none'; };
+        form.onsubmit = function(e) {
+            e.preventDefault();
+            const val = input.value.trim();
+            if (!val) return;
+            appendMessage(val, 'user');
+            input.value = '';
+            botReply(val);
+        };
+
+        // Greet on open
+        toggle.addEventListener('click', function() {
+            if (!messages.innerHTML) {
+                appendMessage("Hi!👋Welcome MBS VASUDHA, How can I Assist you today?", 'bot');
+            }
+        });
+    })();
+    </script>
 
 
   <footer>
@@ -343,7 +358,7 @@
 
 <style>
     body {
-        background-image: url("images/bg.JPG");
+        background-image: url("images/");
         background-color: #710808;
         background-position: center;
         background-size: cover;
@@ -411,7 +426,7 @@
       display: flex;
       align-items: flex-end;
       padding: 2rem;
-      color: #ffffff;
+      color: #090909;
     }
     .hero h1 {
       font-size: 2.5rem;
